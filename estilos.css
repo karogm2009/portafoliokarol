@@ -13,11 +13,9 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     margin: 0;
@@ -31,11 +29,15 @@ body {
         color 0.4s ease;
 }
 
-
 h1,
 h2,
 h3 {
     font-family: 'Poppins', Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -58,7 +60,6 @@ body.modo-oscuro {
     color: #e4e4e4;
 }
 
-
 body.modo-oscuro section {
     background-color: #1f222b;
 
@@ -66,22 +67,18 @@ body.modo-oscuro section {
         0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-
 body.modo-oscuro section h2 {
     color: #a29bfe;
 }
-
 
 body.modo-oscuro section h2::after {
     background-color: #a29bfe;
 }
 
-
 body.modo-oscuro .hero-saludo,
 body.modo-oscuro .hero-titulo {
     color: #a29bfe;
 }
-
 
 body.modo-oscuro .proyecto,
 body.modo-oscuro .galeria figure {
@@ -89,17 +86,14 @@ body.modo-oscuro .galeria figure {
     border-color: #333743;
 }
 
-
 body.modo-oscuro .proyecto h3,
 body.modo-oscuro .galeria figcaption h4 {
     color: #f1f1f1;
 }
 
-
 body.modo-oscuro .galeria figcaption .proceso {
     color: #b5b5b5;
 }
-
 
 body.modo-oscuro .filtro {
     background-color: #1f222b;
@@ -131,7 +125,6 @@ body.modo-oscuro .filtro {
         transform 0.25s ease;
 }
 
-
 #boton-modo-oscuro:hover {
     background-color: rgba(255, 255, 255, 0.2);
 
@@ -152,7 +145,6 @@ body.modo-oscuro .filtro {
         opacity 0.7s ease,
         transform 0.7s ease;
 }
-
 
 .fade-in.visible {
     opacity: 1;
@@ -187,9 +179,6 @@ header {
         0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-
-/* Brillo decorativo */
-
 header::before {
     content: "";
 
@@ -213,7 +202,6 @@ header::before {
     pointer-events: none;
 }
 
-
 header h1,
 header nav,
 header .subtitulo {
@@ -222,27 +210,6 @@ header .subtitulo {
     z-index: 1;
 }
 
-
-/* =========================================================
-   ENCABEZADO FIJO
-========================================================= */
-
-/*
-header {
-    background-color: #222222;
-    color: white;
-    padding: 20px;
-
-    text-align: center;
-
-    position: sticky;
-    top: 0;
-
-    z-index: 1000;
-}
-*/
-
-
 header h1 {
     margin-top: 0;
 
@@ -250,7 +217,6 @@ header h1 {
 
     letter-spacing: -0.5px;
 }
-
 
 .subtitulo {
     margin-top: 0;
@@ -268,7 +234,7 @@ header h1 {
 
 
 /* =========================================================
-   MENÚ DE NAVEGACIÓN
+   MENÚ
 ========================================================= */
 
 nav {
@@ -276,11 +242,12 @@ nav {
 
     justify-content: center;
 
+    align-items: center;
+
     gap: 20px;
 
     flex-wrap: wrap;
 }
-
 
 nav a {
     position: relative;
@@ -293,9 +260,9 @@ nav a {
 
     font-weight: 500;
 
-    transition: color 0.25s ease;
+    transition:
+        color 0.25s ease;
 }
-
 
 nav a::after {
     content: "";
@@ -316,14 +283,13 @@ nav a::after {
 
     transform-origin: right;
 
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.3s ease;
 }
-
 
 nav a:hover {
     color: #e4e1ff;
 }
-
 
 nav a:hover::after {
     transform: scaleX(1);
@@ -357,7 +323,6 @@ nav a:hover::after {
     margin: 10px 10px 10px auto;
 }
 
-
 .boton-menu span {
     display: block;
 
@@ -373,18 +338,15 @@ nav a:hover::after {
         opacity 0.3s ease;
 }
 
-
 .boton-menu.activo span:nth-child(1) {
     transform:
         translateY(9px)
         rotate(45deg);
 }
 
-
 .boton-menu.activo span:nth-child(2) {
     opacity: 0;
 }
-
 
 .boton-menu.activo span:nth-child(3) {
     transform:
@@ -403,7 +365,7 @@ main {
 
 
 /* =========================================================
-   SECCIONES GENERALES
+   SECCIONES
 ========================================================= */
 
 section {
@@ -425,7 +387,6 @@ section {
         0 10px 30px rgba(0, 0, 0, 0.07);
 }
 
-
 section::before {
     content: "";
 
@@ -445,7 +406,6 @@ section::before {
         );
 }
 
-
 section h2 {
     margin-top: 0;
 
@@ -455,7 +415,6 @@ section h2 {
 
     padding-bottom: 10px;
 }
-
 
 section h2::after {
     content: "";
@@ -493,11 +452,9 @@ section h2::after {
     padding-bottom: 50px;
 }
 
-
 .inicio-texto {
     flex: 1 1 400px;
 }
-
 
 .inicio-imagen {
     position: relative;
@@ -506,7 +463,6 @@ section h2::after {
 
     text-align: center;
 }
-
 
 .hero-saludo {
     margin: 0 0 4px 0;
@@ -519,7 +475,6 @@ section h2::after {
 
     font-weight: 600;
 }
-
 
 .hero-titulo {
     margin: 0 0 18px 0;
@@ -562,7 +517,6 @@ section h2::after {
         box-shadow 0.35s ease;
 }
 
-
 .foto-perfil:hover {
     transform: scale(1.03);
 
@@ -585,7 +539,6 @@ section h2::after {
     background-color: #6C63FF;
 }
 
-
 .circulo-1 {
     width: 260px;
     height: 260px;
@@ -599,7 +552,6 @@ section h2::after {
     opacity: 0.15;
 }
 
-
 .circulo-2 {
     width: 90px;
     height: 90px;
@@ -609,7 +561,6 @@ section h2::after {
 
     opacity: 0.35;
 }
-
 
 .circulo-3 {
     width: 60px;
@@ -660,7 +611,6 @@ section h2::after {
         box-shadow 0.25s ease;
 }
 
-
 .boton::after {
     content: "→";
 
@@ -668,14 +618,12 @@ section h2::after {
         transform 0.25s ease;
 }
 
-
 .boton:hover {
     transform: translateY(-3px);
 
     box-shadow:
         0 12px 25px rgba(108, 99, 255, 0.45);
 }
-
 
 .hero-botones {
     display: flex;
@@ -687,7 +635,6 @@ section h2::after {
     margin-top: 10px;
 }
 
-
 .boton-outline {
     background: none;
 
@@ -698,11 +645,9 @@ section h2::after {
     box-shadow: none;
 }
 
-
 .boton-outline::after {
     content: "";
 }
-
 
 .boton-outline:hover {
     background-color: #6C63FF;
@@ -724,7 +669,6 @@ section h2::after {
     list-style: none;
 }
 
-
 .lista-habilidades li {
     margin-bottom: 10px;
 
@@ -732,7 +676,6 @@ section h2::after {
 
     position: relative;
 }
-
 
 .lista-habilidades li::before {
     content: "▹";
@@ -748,8 +691,7 @@ section h2::after {
 
 
 /* =========================================================
-   FRANJA DE HERRAMIENTAS
-   NUEVO DISEÑO CON BARRAS
+   HERRAMIENTAS
 ========================================================= */
 
 .subtitulo-herramientas {
@@ -763,7 +705,7 @@ section h2::after {
 }
 
 
-/* Contenedor */
+/* Contenedor general */
 
 .franja-herramientas {
     display: flex;
@@ -772,15 +714,19 @@ section h2::after {
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    gap: 25px;
+    gap: 35px;
 
-    margin-top: 10px;
+    width: 100%;
+
+    margin-top: 20px;
 }
 
 
-/* Cada herramienta */
+/* =========================================================
+   CADA HERRAMIENTA
+========================================================= */
 
 .herramienta-card {
     display: flex;
@@ -789,36 +735,47 @@ section h2::after {
 
     gap: 10px;
 
-    flex: 1 1 250px;
+    width: 250px;
 
-    min-width: 230px;
+    min-width: 250px;
+
+    flex: 0 0 250px;
 }
 
 
 /* =========================================================
-   ICONO DE CADA PROGRAMA
+   ICONO DE LA HERRAMIENTA
 ========================================================= */
 
 .herramienta-icono-badge {
-    width: 58px;
-    height: 58px;
+    width: 58px !important;
 
-    display: flex;
+    height: 58px !important;
+
+    min-width: 58px;
+
+    min-height: 58px;
+
+    display: flex !important;
 
     align-items: center;
 
     justify-content: center;
 
+    padding: 5px;
+
     background-color: #111111;
 
-    border: 2px solid var(--color-marca);
+    border:
+        2px solid var(--color-marca);
 
     border-radius: 10px;
 
-    flex-shrink: 0;
+    overflow: hidden;
 
-    box-shadow:
-        0 0 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+
+    flex-shrink: 0;
 
     transition:
         transform 0.25s ease,
@@ -827,26 +784,22 @@ section h2::after {
 
 
 .herramienta-icono-badge img {
-    width: 44px;
+    width: 44px !important;
 
-    height: 44px;
+    height: 44px !important;
+
+    max-width: 44px !important;
+
+    max-height: 44px !important;
 
     object-fit: contain;
-}
 
-
-.herramienta-card:hover
-.herramienta-icono-badge {
-
-    transform: scale(1.05);
-
-    box-shadow:
-        0 0 15px var(--color-marca);
+    display: block;
 }
 
 
 /* =========================================================
-   INFORMACIÓN DE LA HERRAMIENTA
+   INFORMACIÓN
 ========================================================= */
 
 .herramienta-info {
@@ -856,18 +809,24 @@ section h2::after {
 
     justify-content: center;
 
-    min-width: 140px;
+    flex: 1;
+
+    min-width: 0;
 }
 
 
 .herramienta-nombre-badge {
-    font-size: 15px;
+    display: block;
+
+    font-size: 14px;
 
     font-weight: 600;
 
     color: #333333;
 
     white-space: nowrap;
+
+    margin: 0;
 }
 
 
@@ -878,24 +837,34 @@ section h2::after {
 .nivel-puntos {
     display: flex;
 
+    align-items: center;
+
     gap: 4px;
 
     margin-top: 6px;
+
+    height: 7px;
 }
 
-
-/* Cada barra */
 
 .nivel-puntos .punto {
     display: block;
 
-    width: 27px;
+    width: 24px !important;
 
-    height: 6px;
+    height: 6px !important;
+
+    min-width: 24px;
+
+    padding: 0;
+
+    margin: 0;
 
     border-radius: 10px;
 
     background-color: #dddddd;
+
+    box-sizing: border-box;
 
     transition:
         transform 0.2s ease,
@@ -903,14 +872,14 @@ section h2::after {
 }
 
 
-/* Barra completa */
+/* 100%, 80%, 40%, etc. */
 
 .nivel-puntos .punto.lleno {
     background-color: var(--color-marca);
 }
 
 
-/* Barra al 50% */
+/* Media barra */
 
 .nivel-puntos .punto.medio {
     background:
@@ -922,15 +891,24 @@ section h2::after {
 }
 
 
-/* Efecto al pasar el mouse */
+/* =========================================================
+   EFECTO HOVER
+========================================================= */
+
+.herramienta-card:hover
+.herramienta-icono-badge {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 12px var(--color-marca);
+}
 
 .herramienta-card:hover
 .nivel-puntos .punto.lleno,
 
 .herramienta-card:hover
 .nivel-puntos .punto.medio {
-
-    transform: scaleY(1.35);
+    transform: scaleY(1.4);
 }
 
 
@@ -943,18 +921,20 @@ body.modo-oscuro
     color: #eeeeee;
 }
 
-
 body.modo-oscuro
 .herramienta-icono-badge {
     background-color: #111111;
 }
 
-
 body.modo-oscuro
-.nivel-puntos .punto:not(.lleno):not(.medio) {
+.nivel-puntos .punto {
     background-color: #555555;
 }
 
+body.modo-oscuro
+.nivel-puntos .punto.lleno {
+    background-color: var(--color-marca);
+}
 
 body.modo-oscuro
 .nivel-puntos .punto.medio {
@@ -968,7 +948,7 @@ body.modo-oscuro
 
 
 /* =========================================================
-   CONTENEDOR DE PROYECTOS
+   PROYECTOS
 ========================================================= */
 
 .contenedor-proyectos {
@@ -981,17 +961,13 @@ body.modo-oscuro
     margin-top: 25px;
 }
 
-
-/* =========================================================
-   TARJETAS DE PROYECTOS
-========================================================= */
-
 .proyecto {
     flex: 1 1 250px;
 
     padding: 20px;
 
-    border: 1px solid #eeeeee;
+    border:
+        1px solid #eeeeee;
 
     border-radius: 10px;
 
@@ -1002,14 +978,12 @@ body.modo-oscuro
         box-shadow 0.3s ease;
 }
 
-
 .proyecto:hover {
     transform: translateY(-6px);
 
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.12);
 }
-
 
 .proyecto img {
     width: 100%;
@@ -1021,7 +995,6 @@ body.modo-oscuro
     border-radius: 8px;
 }
 
-
 .proyecto h3 {
     margin-bottom: 10px;
 
@@ -1030,18 +1003,7 @@ body.modo-oscuro
 
 
 /* =========================================================
-   IMÁGENES GENERALES
-========================================================= */
-
-img {
-    max-width: 100%;
-
-    height: auto;
-}
-
-
-/* =========================================================
-   FILTROS DE LA GALERÍA
+   FILTROS DE GALERÍA
 ========================================================= */
 
 .filtros-galeria {
@@ -1056,11 +1018,11 @@ img {
     margin-top: 20px;
 }
 
-
 .filtro {
     padding: 8px 16px;
 
-    border: 2px solid #6C63FF;
+    border:
+        2px solid #6C63FF;
 
     border-radius: 20px;
 
@@ -1082,11 +1044,9 @@ img {
         color 0.25s ease;
 }
 
-
 .filtro:hover {
     background-color: #ece9ff;
 }
-
 
 .filtro.activo {
     background-color: #6C63FF;
@@ -1111,9 +1071,9 @@ img {
     margin-top: 25px;
 }
 
-
 .galeria figure {
-    flex: 1 1 240px;
+    flex:
+        1 1 240px;
 
     max-width: 260px;
 
@@ -1121,7 +1081,8 @@ img {
 
     background-color: #fafafa;
 
-    border: 1px solid #eeeeee;
+    border:
+        1px solid #eeeeee;
 
     border-radius: 10px;
 
@@ -1131,7 +1092,6 @@ img {
         box-shadow 0.3s ease;
 }
 
-
 .galeria figure:hover {
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.12);
@@ -1139,7 +1099,7 @@ img {
 
 
 /* =========================================================
-   IMÁGENES DE LA GALERÍA
+   IMÁGENES DE GALERÍA
 ========================================================= */
 
 .galeria figure img {
@@ -1157,14 +1117,13 @@ img {
         transform 0.3s ease;
 }
 
-
 .galeria figure:hover img {
     transform: scale(1.08);
 }
 
 
 /* =========================================================
-   DESCRIPCIÓN DE LAS IMÁGENES
+   DESCRIPCIÓN GALERÍA
 ========================================================= */
 
 .galeria figcaption {
@@ -1175,7 +1134,6 @@ img {
     font-size: 15px;
 }
 
-
 .galeria figcaption h4 {
     margin: 0 0 8px 0;
 
@@ -1183,7 +1141,6 @@ img {
 
     color: #222831;
 }
-
 
 .galeria figcaption .proceso {
     margin: 0 0 10px 0;
@@ -1194,7 +1151,6 @@ img {
 
     line-height: 1.5;
 }
-
 
 .galeria figcaption .herramienta {
     display: inline-block;
@@ -1223,7 +1179,6 @@ img {
 
 .galeria figcaption
 .herramienta::after {
-
     content:
         attr(data-icono)
         " "
@@ -1262,10 +1217,8 @@ img {
         transform 0.2s ease;
 }
 
-
 .galeria figcaption
 .herramienta:hover::after {
-
     opacity: 1;
 
     transform:
@@ -1301,11 +1254,6 @@ img {
     padding: 40px;
 }
 
-
-/* =========================================================
-   IMAGEN AMPLIADA
-========================================================= */
-
 .imagen-ampliada {
     max-width: 90%;
 
@@ -1322,7 +1270,7 @@ img {
 
 
 /* =========================================================
-   BOTÓN CERRAR
+   BOTÓN CERRAR VISOR
 ========================================================= */
 
 .cerrar {
@@ -1344,7 +1292,6 @@ img {
         color 0.2s ease,
         transform 0.2s ease;
 }
-
 
 .cerrar:hover {
     color: #6C63FF;
@@ -1374,16 +1321,13 @@ footer {
     margin-top: 40px;
 }
 
-
 footer h2 {
     margin-top: 0;
 }
 
-
 footer a {
     color: white;
 }
-
 
 footer a:hover {
     text-decoration: none;
@@ -1397,7 +1341,8 @@ footer a:hover {
 .invitacion-contacto {
     max-width: 500px;
 
-    margin: 0 auto 25px;
+    margin:
+        0 auto 25px;
 
     font-size: 16px;
 
@@ -1418,7 +1363,6 @@ footer a:hover {
 
     margin-bottom: 25px;
 }
-
 
 .icono-contacto {
     display: flex;
@@ -1445,14 +1389,12 @@ footer a:hover {
         transform 0.25s ease;
 }
 
-
 .icono-contacto:hover {
     background-color:
         rgba(255, 255, 255, 0.25);
 
     transform: translateY(-4px);
 }
-
 
 .copyright {
     margin-top: 20px;
@@ -1462,7 +1404,7 @@ footer a:hover {
 
 
 /* =========================================================
-   ADAPTACIÓN PARA PANTALLAS PEQUEÑAS
+   RESPONSIVE - CELULAR
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -1471,6 +1413,8 @@ footer a:hover {
         font-size: 28px;
     }
 
+
+    /* Menú hamburguesa */
 
     .boton-menu {
         display: flex;
@@ -1496,6 +1440,8 @@ footer a:hover {
     }
 
 
+    /* Inicio */
+
     .inicio {
         text-align: center;
     }
@@ -1506,6 +1452,8 @@ footer a:hover {
     }
 
 
+    /* Secciones */
+
     section {
         margin: 20px auto;
 
@@ -1513,10 +1461,14 @@ footer a:hover {
     }
 
 
+    /* Proyectos */
+
     .contenedor-proyectos {
         flex-direction: column;
     }
 
+
+    /* Galería */
 
     .galeria {
         flex-direction: column;
@@ -1532,25 +1484,32 @@ footer a:hover {
     }
 
 
-    /* Herramientas en celular */
+    /* =====================================================
+       HERRAMIENTAS EN CELULAR
+    ===================================================== */
 
     .franja-herramientas {
         justify-content: flex-start;
 
+        flex-wrap: nowrap;
+
         overflow-x: auto;
 
-        flex-wrap: nowrap;
+        gap: 25px;
 
         padding-bottom: 15px;
     }
 
 
     .herramienta-card {
-        flex: 0 0 auto;
+        flex:
+            0 0 250px;
 
-        min-width: 230px;
+        width: 250px;
     }
 
+
+    /* Visor */
 
     .visor {
         padding: 20px;
